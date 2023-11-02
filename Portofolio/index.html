@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=VT323&display=swap" rel="stylesheet">
+</head>
+
+<style>
+.container {
+  position: relative;
+  width: 1160px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  margin: auto;
+}
+.container .box {
+  position: relative;
+  width: 275px;
+  height: 275px;
+  background: #000;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  margin-right: 15px;
+  margin-top: 45px;
+}
+.container:hover .box {
+  transform: rotateY(25deg);
+}
+.container .box:hover ~ .box {
+  transform: rotateY(-25deg);
+}
+.container .box:hover {
+  transform: rotateY(0deg) scale(1.25);
+  z-index: 1;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+}
+.container .box .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.container .box .imgBx:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,rgba(2, 2, 2, 0.593),#211f1e7a);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+  mix-blend-mode: multiply;
+}
+.container .box:hover .imgBx:before {
+  opacity: 1;
+}
+.container .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container .box .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  padding: 20px;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+.container .box .content h2 {
+  color: #fff;
+  transition: 0.5s;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 20px;
+  transform: translateY(200px);
+  transition-delay: 0.3s;
+}
+.container .box:hover .content h2 {
+  transform: translateY(0px);
+}
+.container .box .content p {
+  color: #fff;
+  transition: 0.5s;
+  font-size: 14px;
+  transform: translateY(200px);
+  transition-delay: 0.4s;
+}
+.container .box:hover .content p {
+  transform: translateY(0px);
+}
+</style>
+<body>
+   
+    <p style="font-size: 30px;font-family: 'Lilita One', cursive;
+    font-family: 'VT323', monospace;font-size: 50px;margin-top: 4rem;">these are some of my projects</p>
+<div class="container">
+  <div class="box">
+    <div class="imgBx">
+      <img src="https://lw-inky.vercel.app/p1.png">
+    </div>
+    <div class="content">
+      <div>
+        <h2>Padata Chat</h2>
+        <p style="font-size: small;">Ruang berkomunikasi dengan membuat kode room secara custom
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="box">
+    <div class="imgBx">
+      <img src="https://lw-inky.vercel.app/p2.png">
+    </div>
+    <div class="content">
+      <div>
+        <h2>+62TV</h2>
+        <p style="font-size: small;">Tempat Streamingnya anak kos
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="box">
+    <div class="imgBx">
+      <img src="https://lw-inky.vercel.app/s4.png">
+    </div>
+    <div class="content">
+      <div>
+        <h2>Sans QR</h2>
+        <p style="font-size: small;">Membuat teks menjadi kode QR.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="box">
+    <div class="imgBx">
+      <img src="https://lw-inky.vercel.app/s3.png">
+    </div>
+    <div class="content">
+      <div>
+        <h2>Login Page</h2>
+        <p style="font-size: small;">Halaman SIgn In & Sign Up
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
